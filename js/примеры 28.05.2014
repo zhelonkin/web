@@ -1,0 +1,95 @@
+/*alert("Hello world!");
+var message = "Hello, ";
+message = message + ' world';
+message += '!';
+alert(message);
+message = 10;
+message += "10";
+alert(message);
+
+var arr1 = new Array();
+var arr2 = [];
+arr1[0] = 0;
+arr1[1] = 1;
+alert(arr1.length);
+for (var i = 0; i < arr1.length; ++i)
+{
+   alert(arr1[i]);
+}
+alert(arr1.join(' , '));
+
+while (something)
+{
+  // do
+} */
+/*
+// Объекты
+var obj1 = new Object();
+var obj2 = {};
+var userInfo =
+{
+  firstName : "Sarah",
+  lastName : "Riviere",
+  age : 32
+};
+
+userInfo.age = 30;
+//alert(userInfo.firstName);
+console.log("First Name " + userInfo.firstName);
+*/
+/*
+//Function
+function printHello(userName)
+{
+  alert('Hello, ' + userName);
+}
+
+printHello("Sarah");
+
+*/
+
+//JavaScript Событие (Events)
+/*
+function onWindowLoaded()
+{
+  alert('Page loaded');
+}
+
+window.onload = onWindowLoaded; // onload - название события у объекта window
+*/
+
+function onWindowLoaded()
+{
+  /*var h1Elements = document.getElementsByTagName('h1');
+  //console.dir(h1Elements);
+  var headline = h1Elements[0];
+  //console.dir(headline);
+  headline.innerHTML = "Hello, Sarah!";
+  headline.onclick = function()
+  {
+    onHeadlineClicked(headline);
+  };*/
+  var helloText = document.getElementById('helloText');
+  helloText.innerHTML = '<a href = "www.yandex.ru">Hello, yandex</a>';
+}
+/*
+function onHeadlineClicked(headline)
+{
+  headline.style.color = 'green';
+  var link = document.createElement('a'); //Создает ссылку в конце блока
+  link.href = 'http://ya.ru';
+  link.innerHTML = "Click me";
+  document.body.appendChild(link);
+}*/
+
+
+window.onload = onWindowLoaded;
+
+
+function onWindowLoaded()
+{
+  var helloText = document.getElementById('helloText');  // ищет helloText и добавляет туда ссылкуы
+  helloText.innerHTML = '<a href = "//ya.ru">Hello, yandex</a>';
+}
+
+

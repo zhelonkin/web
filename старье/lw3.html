@@ -1,0 +1,63 @@
+<DOCTYPE html>
+<html>
+    <head>
+	    <title>signup</title>
+		<meta charset="utf-8" />
+	</head>
+	
+	<body>
+	  <h1>Sign Up</h1>
+	  <p>It's free and always will be</p>
+	  <form action="/signup2.php" method="post"
+		      enctype="text/plain">
+		    <label>First name:</label>
+			<input type="text" name="first_name" />
+			<br />
+			<label>Last name:</label>
+			<input type="text" name="last_name" />
+			<br />
+			<label>Your Email:</label>
+			<input type="text" name="email" />
+			<br />
+			<label>Re-enter Email:</label>
+			<input type="text" name="re_email" />
+			<br />
+			<label>New password:</label>
+			<input type="text" name="password" />
+			<br />
+			<label>I am:</label>
+			<select><option>Select sex</option>
+			<option>male</option>
+			<option>female</option>
+			</select>
+			<br />
+			<label>Birthday:</label>
+			<select><option>Month:</option>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+			<option>6</option>
+			<option>7</option>
+			<option>8</option>
+			<option>9</option>
+			<option>10</option>
+			<option>11</option>
+			<option>12</option>
+			</select>
+			<select name="day_of_year"><option>Day:</option>
+			<?php
+			    for ($day = 1; $day <= 31; ++$day)
+				{
+			?>
+				    <option><?=$day;?></option>
+			<?php
+			    }
+			?>
+			</select>			
+			<input type="submit" value="Отправить" />
+		</form>
+	  
+	</body>
+</html>
