@@ -1,15 +1,19 @@
 <?php
 
-// К надежности прибавляется (4*n), где n - количество всех симоволов пароля
-
+/**
+ * К надежности прибавляется (4*n), 
+ * где n - количество всех симоволов пароля 
+ */
 function lengthStrength( $password )
 {
     $n = strlen( $password );
     return 4 * $n;
 }
 
-// К надежности прибавляется +(n*4), где n - количество цифр в пароле
-
+/**
+ * К надежности прибавляется +(n*4),
+ * где n - количество цифр в пароле
+ */ 
 function numberOfDigitStrength( $password )
 {
     $n = 0;
@@ -23,9 +27,10 @@ function numberOfDigitStrength( $password )
     return $n * 4;
 }
 
-//4) К надежности прибавляется +((len-n)*2) в случае,
-// если пароль содержит n символов в верхнем регистре
-
+/** 
+ * К надежности прибавляется +((len-n)*2) в случае,
+ * если пароль содержит n символов в верхнем регистре
+ */
 function hightRegisterStrength( $password )
 {
     $n = 0;
@@ -58,8 +63,10 @@ function lowRegisterStrength( $password )
     return (strlen( $password ) - $n) * 2;
 }
 
-// Если пароль состоит только из букв вычитаем число равное количеству символов.
-
+/**
+ * Если пароль состоит только из букв вычитаем число
+ * равное количеству символов
+ */
 function lettersStrength( $password )
 {
     $n = 0;
@@ -73,8 +80,10 @@ function lettersStrength( $password )
     return ($n == strlen( $password )) ? (-$n) : 0;
 }
 
-// Если пароль состоит только из цифр вычитаем число равное количеству символов.
-
+/** 
+ * Если пароль состоит только из цифр вычитаем число
+ * равное количеству символов
+ */
 function digitsStrength( $password )
 {
     $n = 0;
@@ -88,9 +97,10 @@ function digitsStrength( $password )
     return ($n == strlen( $password )) ? (-$n) : 0;
 }
 
-// За каждый повторяющийся символ в пароле
-// вычитается количество повторяющихся символов
-
+/**
+ * За каждый повторяющийся символ в пароле
+ * вычитается количество повторяющихся символов
+ */
 function matchStrength( $password )
 {
     $n = 0;
@@ -104,8 +114,9 @@ function matchStrength( $password )
     return (-$n);
 } 
 
-// Итоговая надежность
-
+/**
+ * Итоговая надежность
+ */
 function sumStrength( $password )
 {
     $strength  = lengthStrength( $password );

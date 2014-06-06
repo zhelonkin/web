@@ -10,11 +10,13 @@
                 echo "Second Name: " . $info[1];
                 echo "Email: " . $info[2];
                 echo "Age: " . $info[3];
-            } else
+            } 
+            else
             {
                 echo "Ошибка открытия файла";
             }
-        } else
+        } 
+        else
         {
             echo "email пуст";
         };                

@@ -13,11 +13,13 @@
                 fwrite($file, $age);
                 fclose($file);
                 echo "Запись произведена";
-            } else
+            } 
+            else
             {
                 echo "Ошибка, файл не создан";
             };
-        } else
+        } 
+        else
         {
             echo "Введены не все строки формы";
         }

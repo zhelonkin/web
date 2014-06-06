@@ -1,6 +1,42 @@
-/* .sign_up_button
+body
 {
-    background-image: url(../images/sign_up_button.png);
-	width: 70px;
+    width: 389;
+    background: #FCFDFE; /* Для старых браузров */
+    background: linear-gradient(to bottom, #FCFDFE, #DDE2EE);
+    padding: 10px;
+    border: 1px solid #333;
+    font-family: Tahoma;
 }
- */
+
+div
+{
+    text-align: left;
+}
+
+.button
+{
+    background-image: url(../images/sign_up.png);
+    width: 111px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.sign_up
+{
+    color #0E385F;
+    font-size: 13px;
+}
+
+.text_area
+{
+    margin: 2px;
+    width: 256px;
+    height: 25px;
+}
+
+.list
+{
+    width: 76px;
+    height: 30px;
+}
