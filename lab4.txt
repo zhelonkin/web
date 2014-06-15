@@ -1,0 +1,55 @@
+mysql.exe --port=7188 -u root
+
+>SHOW DATABASES;
+>CREATE DATABASE rental;
+>USE rental;
+>SHOW TABLES;
+>CREATE TABLE dvd(dvd_id INT(11) UNSIGNED auto_increment, title VARCHAR(50), product_year DATE, PRIMARY KEY(dvd_id));
+>DESCRIBE dvd;
+
+>CREATE TABLE dvd(customer_id INT(11) UNSIGNED auto_increment, first_name VARCHAR(50), last_name VARCHAR(50), 
+->passport_code INT(10), registration_date DATE, PRIMARY KEY(customer_id));
+>DESCRIBE customer;
+
+>CREATE TABLE offer(offer_id INT(11) UNSIGNED auto_increment, dvd_id INT(11) UNSIGNED, customer_id INT(11) UNSIGNED, 
+->offer_date DATE, return_date DATE, PRIMARY KEY(offer_id));
+>DESCRIBE customer;
+
+>INSERT INTO dvd(title, product_year) VALES ('Moscow', 19890101), ('Rome', 20100101), ('Kiev', 20050424), ('Kaluga', 18760708);
+>SELECT * FROM dvd;
+>INSERT INTO customer(first_name, last_name, passport_code, registration_date) 
+->VALES 
+->('Ivan', 'Ivanov', 1112999999, 20110109),
+->('Peter', 'Petrov', 1112888888, 20100109),
+->('Semen', 'Semenov', 1112777777, 20090109),
+->('Boris', 'Borisov', 1112666666, 20080109);
+>SELECT * FROM customer;
+
+>INSERT INTO customer(first_name, last_name, passport_code, registration_date) 
+->VALES 
+->('Ivan', 'Ivanov', 1112999999, 20110109),
+->('Peter', 'Petrov', 1112888888, 20100109),
+->('Semen', 'Semenov', 1112777777, 20090109),
+->('Boris', 'Borisov', 1112666666, 20080109);
+>SELECT * FROM customer;
+
+>INSERT INTO offer(dvd_id, customer_id, offer_date, return_date_date) 
+->VALES 
+->(4, 4, 20100109, 20120101),
+->(3, 3, 20140101, 20140102),
+->(2, 2, 20130103, 20140404),
+->(1, 1, 20140102, 20140302);
+>SELECT * FROM customer;
+
+
+>SELECT dvd.title FROM dvd WHERE YEAR(product_year) = 2010 ORDER BY title;
+
+>SELECT dvd.title FROM dvd, offer WHERE (dvd.dvd_id = offer.dvd_id) AND (offer.offer_date IS NULL);
+
+>SELECT customer.first_name, customer.last_name, dvd.title FROM customer, dvd, offer
+-> WHERE (
+->YEAR(offer.offer_date) = YEAR(now())
+->AND dvd.dvd_id = offer.dvd_id
+->AND offer.customer_id = customer.customer_id);
+
+

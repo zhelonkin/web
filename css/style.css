@@ -1,42 +1,116 @@
-body
+*
 {
-    width: 389;
-    background: #FCFDFE; /* Для старых браузров */
-    background: linear-gradient(to bottom, #FCFDFE, #DDE2EE);
-    padding: 10px;
-    border: 1px solid #333;
-    font-family: Tahoma;
-}
-
-div
-{
-    text-align: left;
-}
-
-.button
-{
-    background-image: url(../images/sign_up.png);
-    width: 111px;
-    height: 30px;
     margin: 0;
     padding: 0;
+    outline: none;
+    border: none;
+}
+
+form
+{
+    width: 372px;
+    background: linear-gradient(to bottom, #FCFDFE, #DDE2EE);
+    font: 14px Times New Roman;
+    color: #1D2A5B;
+    margin-left: 400px;
+    margin-top: 50px;
+    border: 1px solid black;
+    padding-right: 12px;
+    padding-left: 3px;
 }
 
 .sign_up
 {
+    font-size: 19px;
+    font-weight: bold;
+    margin-left: 7px;
+    margin-top: 6px;
     color #0E385F;
-    font-size: 13px;
+}
+
+.It
+{
+    border-bottom: 1px solid #9AAFCA;
+    margin-bottom: 13px;
+    padding-left: 10px;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    font: 17px Time New Toman;
+}
+
+.info_block
+{
+    text-align: right;
+    margin-bottom: 5px;
 }
 
 .text_area
 {
-    margin: 2px;
-    width: 256px;
-    height: 25px;
+    width: 262px;
+    height: 31px;
+    border: 1px solid #96A6C5;
 }
 
-.list
+.month_text
 {
     width: 76px;
     height: 30px;
+    border: 1px solid #96A6C5;
+    padding-left: 5px;
 }
+
+.day_text
+{
+    width: 62px;
+    height: 30px;
+    border: 1px solid #96A6C5;
+    padding-left: 5px;
+}
+
+.year_text
+{
+    width: 67px;
+    height: 30px;
+    margin-right: 50px;
+    border: 1px solid #96A6C5;
+    padding-left: 5px;
+}
+
+.sex_text
+{
+    width: 101px;
+    height: 30px;
+    margin-right: 162px;
+    border: 1px solid #96A6C5;
+    padding-left: 5px;
+}
+
+.Why_do
+{
+    font: 12px Times New Roman;
+    margin-left: 109px;
+}
+
+.button
+{
+    margin-left: 110px;
+    margin-top: 3px;
+}
+
+/*
+.styled_select select 
+{
+   background: transparent;
+   width: 76px;
+   padding: 5px;
+   line-height: 1;
+   height: 30px;
+   -webkit-appearance: none;
+}
+.styled_select 
+{
+   width: 70px;
+   height: 30px;
+   overflow: hidden;
+   background: url(new_arrow.png) no-repeat right;
+}*/
