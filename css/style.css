@@ -1,42 +1,106 @@
-body
+*
 {
-    width: 389;
-    background: #FCFDFE; /* Для старых браузров */
-    background: linear-gradient(to bottom, #FCFDFE, #DDE2EE);
-    padding: 10px;
-    border: 1px solid #333;
-    font-family: Tahoma;
-}
-
-div
-{
-    text-align: left;
-}
-
-.button
-{
-    background-image: url(../images/sign_up.png);
-    width: 111px;
-    height: 30px;
     margin: 0;
     padding: 0;
+    outline: none;
+    border: none;
+}
+
+form
+{
+    width: 372px;
+    background: linear-gradient(to bottom, #FCFDFE, #DDE2EE);
+    font: 13px Arial;
+    color: #1D2A5B;
+    margin-left: 500px;
+    margin-top: 200px;
+    border: 1px solid black;
+    padding-right: 12px;
+    padding-left: 3px;
+}
+
+input
+{
+    margin-bottom: 5px;
+}
+
+p
+{
+    text-align: right;
+}
+
+.It
+{
+    border-bottom: 1px solid #9AAFCA;
+    margin-bottom: 8px;
+    margin-bottom: 13px;
+    font: 15px Arial;
 }
 
 .sign_up
 {
+    font: bold 19px;
+    margin-left: 9px;
+    margin-top: 8px;
     color #0E385F;
-    font-size: 13px;
+}
+
+.Why_do
+{
+    font: 12px Arial;
+    margin-left: 114px;
 }
 
 .text_area
 {
-    margin: 2px;
-    width: 256px;
-    height: 25px;
+    width: 262px;
+    height: 31px;
+    border: 1px solid #96A6C5;
 }
 
-.list
+.month_text
 {
     width: 76px;
     height: 30px;
 }
+
+.day_text
+{
+    width: 62px;
+    height: 30px;
+}
+
+.year_text
+{
+    width: 67px;
+    height: 30px;
+}
+
+.sex_text
+{
+    width: 101px;
+    height: 30px;
+}
+
+.button
+{
+    margin-left: 114px;
+}
+
+/*
+.styled_select select 
+{
+   background: transparent;
+   width: 76px;
+   padding: 5px;
+   line-height: 1;
+   height: 30px;
+   -webkit-appearance: none;
+}
+.styled_select 
+{
+   width: 70px;
+   height: 30px;
+   overflow: hidden;
+   background: url(new_arrow.png) no-repeat right;
+}*/
