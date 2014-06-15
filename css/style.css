@@ -36,12 +36,15 @@ form
     margin-top: 5px;
     padding-bottom: 10px;
     font: 17px Time New Toman;
-}
 
 .info_block
 {
     text-align: right;
+    font: bold 19px;
+    margin-left: 9px;
+    margin-top: 8px;
     margin-bottom: 5px;
+    color #0E385F;
 }
 
 .text_area
@@ -95,8 +98,8 @@ form
 {
     margin-left: 110px;
     margin-top: 3px;
+    margin-left: 114px;
 }
-
 /*
 .styled_select select 
 {

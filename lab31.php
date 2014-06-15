@@ -20,7 +20,7 @@
             <input class="text_area" type="text" name="email">
         </div>
         <div class="info_block">Re-enter Email: 
-            <input class="text_area" type="text" name="re_mail">
+            <input class="text_area" type="text" name="re_email">
         </div>
         <div class="info_block">New Password:   
             <input class="text_area" type="password" name="password">
@@ -72,4 +72,3 @@
     </form>
     </body>
 </html>
-
