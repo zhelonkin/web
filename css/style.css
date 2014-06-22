@@ -4,47 +4,78 @@
     padding: 0;
     outline: none;
     border: none;
+
+}
+
+body
+{
+    background-color: black;
 }
 
 form
 {
     width: 372px;
     background: linear-gradient(to bottom, #FCFDFE, #DDE2EE);
-    font: 14px Times New Roman;
+    font: 13px Tahoma;
     color: #1D2A5B;
     margin-left: 400px;
     margin-top: 50px;
-    border: 1px solid black;
-    padding-right: 12px;
-    padding-left: 3px;
+    padding-right: 13px;
+    padding-left: 4px;
 }
 
-.sign_up
+.headline
 {
     font-size: 19px;
-    font-weight: bold;
-    margin-left: 7px;
-    margin-top: 6px;
-    color #0E385F;
+    color: #0E385F;
+    padding-left: 8px;
+    padding-top: 6px;
 }
 
-.It
+.sub_headline
 {
     border-bottom: 1px solid #9AAFCA;
+    font-size: 14px;
     margin-bottom: 13px;
-    padding-left: 10px;
     margin-top: 5px;
-    padding-bottom: 10px;
-    font: 17px Time New Toman;
+    padding-left: 9px;
+    padding-bottom: 11px;    
+}
 
 .info_block
 {
     text-align: right;
-    font: bold 19px;
-    margin-left: 9px;
-    margin-top: 8px;
-    margin-bottom: 5px;
     color #0E385F;
+}
+
+.first_name
+{
+    margin-bottom: 4px;
+}
+
+.last_name
+{
+    margin-bottom: 4px;
+}
+
+.your_email
+{
+    margin-bottom: 4px;
+}
+
+.re_email
+{
+    margin-bottom: 4px;
+}
+
+.password
+{
+    margin-bottom: 4px;
+}
+
+.sex
+{
+    margin-bottom: 4px;
 }
 
 .text_area
@@ -59,7 +90,8 @@ form
     width: 76px;
     height: 30px;
     border: 1px solid #96A6C5;
-    padding-left: 5px;
+    padding-left: 3px;
+    margin-right: -2px;
 }
 
 .day_text
@@ -67,16 +99,16 @@ form
     width: 62px;
     height: 30px;
     border: 1px solid #96A6C5;
-    padding-left: 5px;
+    padding-left: 4px;
 }
 
 .year_text
 {
     width: 67px;
     height: 30px;
-    margin-right: 50px;
+    margin-right: 53px;
     border: 1px solid #96A6C5;
-    padding-left: 5px;
+    padding-left: 3px;
 }
 
 .sex_text
@@ -85,20 +117,20 @@ form
     height: 30px;
     margin-right: 162px;
     border: 1px solid #96A6C5;
-    padding-left: 5px;
+    padding-left: 3px;
 }
 
-.Why_do
+.end_line
 {
-    font: 12px Times New Roman;
+    font-size: 11px;
     margin-left: 109px;
+    margin-top: 2px;
 }
 
 .button
 {
-    margin-left: 110px;
-    margin-top: 3px;
-    margin-left: 114px;
+    margin-top: 8px;
+    margin-left: 109px;
 }
 /*
 .styled_select select 
