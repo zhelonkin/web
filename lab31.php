@@ -16,10 +16,10 @@
      <input class="text_area" type="text" name="last_name">
     </div>
     <div class="info_block your_email">Your Email: 
-     <input class="text_area" type="text" name="email">
+     <input class="text_area" type="email" name="email">
     </div>
     <div class="info_block re_email">Re-enter Email: 
-      <input class="text_area" type="text" name="re_email">
+      <input class="text_area" type="email" name="re_email">
     </div>
     <div class="info_block password">New Password:   
       <input class="text_area" type="password" name="password">
