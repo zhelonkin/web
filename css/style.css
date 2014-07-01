@@ -12,7 +12,7 @@ body
     background-color: black;
 }
 
-form
+.form
 {
     width: 372px;
     background: linear-gradient(to bottom, #FCFDFE, #DDE2EE);
@@ -45,36 +45,7 @@ form
 .info_block
 {
     text-align: right;
-    color #0E385F;
-}
-
-.first_name
-{
-    margin-bottom: 4px;
-}
-
-.last_name
-{
-    margin-bottom: 4px;
-}
-
-.your_email
-{
-    margin-bottom: 4px;
-}
-
-.re_email
-{
-    margin-bottom: 4px;
-}
-
-.password
-{
-    margin-bottom: 4px;
-}
-
-.sex
-{
+    color: #0E385F;
     margin-bottom: 4px;
 }
 
@@ -132,20 +103,10 @@ form
     margin-top: 8px;
     margin-left: 109px;
 }
-/*
-.styled_select select 
+
+.ask_form_header
 {
-   background: transparent;
-   width: 76px;
-   padding: 5px;
-   line-height: 1;
-   height: 30px;
-   -webkit-appearance: none;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #96A6C5;
 }
-.styled_select 
-{
-   width: 70px;
-   height: 30px;
-   overflow: hidden;
-   background: url(new_arrow.png) no-repeat right;
-}*/

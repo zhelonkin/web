@@ -17,11 +17,20 @@ function getUserInfoFromRequest()
     return $userInfo;
 }
 
+function checkField( $userInfo, &$errorCode )
+{
+    $namePattern = '/^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$/';
+    return preg_match( $namePattern, $userInfo );
+}
+
 function checkFirstName( $userInfo, &$errorCode )
 {
-    if ( empty( $userInfo['firstName'] ) )
+    if ( $errorCode == USER_INFO_OK )
     {
-        $errorCode = ERR_EMPTY_FIRST_NAME;
+        if ( !checkField( $userInfo['firstName'], &$errorCode ) )
+        {
+            $errorCode = ERR_INCORRECT_FIRST_NAME;
+        }
     }
     return $errorCode;
 }
@@ -30,40 +39,30 @@ function checkLastName( $userInfo, &$errorCode )
 {
     if ( $errorCode == USER_INFO_OK )
     {
-        if ( empty( $userInfo['lastName'] ) )
+        if ( !checkField( $userInfo['lastName'], &$errorCode ) )
         {
-            $errorCode = ERR_EMPTY_LAST_NAME;
-        } 
+            $errorCode = ERR_INCORRECT_LAST_NAME;
+        }
     }
-    return $errorCode;    
+    return $errorCode;
 }
 
 function checkEmail( $userInfo, &$errorCode )
 {
     if ( $errorCode == USER_INFO_OK )
     {
-        if ( empty( $userInfo['email'] ) )
+        if ( empty( $userInfo['email'] ) || !filter_var( $userInfo['email'], FILTER_VALIDATE_EMAIL ) )
         {
-            $errorCode = ERR_EMPTY_EMAIL;
-        } else if ( !filter_var( $userInfo['email'], FILTER_VALIDATE_EMAIL ) )
-        {
-            $errorCode = INCORRECT_EMAIL;
-        }                    
+            $errorCode = ERR_INCORRECT_EMAIL;
+        }       
     }
-    return $errorCode;
-}
-
-function checkReEmail( $userInfo, &$errorCode )
-{
+    
     if ( $errorCode == USER_INFO_OK )
     {
-        if ( empty( $userInfo['reEmail'] ) )
+        if ( empty( $userInfo['reEmail'] ) || $userInfo['email'] != $userInfo['reEmail'] )
         {
-            $errorCode = ERR_EMPTY_RE_EMAIL;
-        } else if ( !( $userInfo['email'] == $userInfo['reEmail'] ) )
-        {
-            $errorCode = ERR_INCORRECT_RE_EMAIL;
-        }
+            $errorCode = ERR_INCORRECT_EMAIL;
+        }        
     }
     return $errorCode;
 }
@@ -72,10 +71,7 @@ function checkPassword( $userInfo, &$errorCode )
 {
     if ( $errorCode == USER_INFO_OK )
     {
-        if ( empty( $userInfo['password'] ) )
-        {
-            $errorCode = ERR_EMPTY_PASSWORD;
-        } else if ( !ctype_alnum( $userInfo['password'] )) 
+        if ( empty( $userInfo['password'] ) || !ctype_alnum( $userInfo['password'] ) )
         {
             $errorCode = ERR_INCORRECT_PASSWORD;
         } 
@@ -87,62 +83,38 @@ function checkSex( $userInfo, &$errorCode )
 {
     if ( $errorCode == USER_INFO_OK )
     {
-        if ( empty( $userInfo['sex'] ) )
+        if ( $userInfo['sex'] == 'Select Sex:' )
         {
             $errorCode = ERR_EMPTY_SEX;
         }
-    }
+    };
     return $errorCode;
 }
 
-function checkMonth( $userInfo, &$errorCode )
+function checkOfDate( $userInfo, &$errorCode )
 {
     if ( $errorCode == USER_INFO_OK )
     {
-        if ( empty( $userInfo['month'] ) )
+        if ( $userInfo['month'] == 'Month:'
+          || $userInfo['day'] == 'Day:' 
+          || $userInfo['year'] == 'Year:' )
         {
-            $errorCode = ERR_EMPTY_MONTH;
+            $errorCode = ERR_EMPTY_DATE;
         }
     }
     return $errorCode;
 }
 
-function checkDay( $userInfo, &$errorCode )
-{
-    if ( $errorCode == USER_INFO_OK )
-    {
-        if ( empty( $userInfo['day'] ) )
-        {
-            $errorCode = ERR_EMPTY_DAY;
-        }
-    }
-    return $errorCode;
-}
+function checkUserInfo( $userInfo, &$errorCode )
+{      
+    $errorCode == USER_INFO_OK;
 
-function checkYear( $userInfo, &$errorCode )
-{
-    if ( $errorCode == USER_INFO_OK )
-    {
-        if ( empty( $userInfo['year'] ) )
-        {
-            $errorCode = ERR_EMPTY_YEAR;
-        }
-    }   
-    return $errorCode;
-}
-
-function validateUserInfo( $userInfo, &$errorCode )
-{   
-    
     checkFirstName( $userInfo, &$errorCode );
     checkLastName( $userInfo, &$errorCode );
     checkEmail( $userInfo, &$errorCode );
-    checkReEmail( $userInfo, &$errorCode );
     checkPassword( $userInfo, &$errorCode );
     checkSex( $userInfo, &$errorCode );
-    checkMonth( $userInfo, &$errorCode );
-    checkDay( $userInfo, &$errorCode );
-    checkYear( $userInfo, &$errorCode );
+    checkOfDate( $userInfo, &$errorCode ); 
     
     return $errorCode;
 }
