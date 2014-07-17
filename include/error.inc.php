@@ -10,6 +10,7 @@ const ERR_EMPTY_DATE = 6;
 const ERR_CREATE_FILE = 7;
 const ERR_OPEN_FILE = 8;
 const ERR_FIND_USER_FORM = 9;
+const ERR_ALREADY_EXIST = 10;
 
 
 function errorHandler( $errorCode )
@@ -25,7 +26,8 @@ function errorHandler( $errorCode )
         ERR_EMPTY_DATE => 'Date is not specified',
         ERR_CREATE_FILE => 'File not created',
         ERR_OPEN_FILE => 'File didnt open',
-        ERR_FIND_USER_FORM => 'Nobody with entered email'
+        ERR_FIND_USER_FORM => 'Nobody with entered email',
+        ERR_ALREADY_EXIST => 'String is already exist'
     );
     
     $message = isset( $messages[$errorCode] ) ? $messages[$errorCode] : '';

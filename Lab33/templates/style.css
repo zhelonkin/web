@@ -1,0 +1,103 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+
+}
+
+body
+{
+    background-color: black;
+}
+
+li 
+{
+    list-style-type: none; /* Убираем маркеры */
+}
+
+ul 
+{
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
+.form
+{
+    width: 372px;
+    background: linear-gradient(to bottom, #FCFDFE, #DDE2EE);
+    font: 13px Tahoma;
+    color: #1D2A5B;
+    margin-left: 400px;
+    margin-top: 50px;
+    padding-right: 13px;
+    padding-left: 4px;
+}
+
+.headline
+{
+    font-size: 19px;
+    color: #0E385F;
+    padding-left: 9px;
+    padding-top: 6px;
+    padding-bottom: 11px;
+    margin-bottom: 13px;
+    border-bottom: 1px solid #96A6C5;
+}
+
+.info_block
+{
+    text-align: right;
+}
+
+.text_area
+{
+    width: 262px;
+    height: 31px;
+    border: 1px solid #96A6C5;
+}
+
+.button
+{
+    margin-top: 8px;
+    margin-left: 109px;
+}
+
+/*This style for output form*/
+.output_text
+{
+    padding-top: 6px;
+	padding-left: 6px;
+    margin-bottom: 5px;
+    width: 262px;
+    height: 25px;
+    border: 1px solid #96A6C5;
+}
+
+.first
+{
+    margin-top: 7px;
+}
+
+.all
+{
+    margin-top: 22px;
+}
+
+.left
+{
+    float: left;
+    margin-left: 25px;
+}
+
+.right
+{
+    float: right;
+}
+
+.clear
+{
+    clear: both;
+    padding-top: 5px;
+}

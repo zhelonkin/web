@@ -13,10 +13,12 @@ function getYear()
 function getMonth()
 {
     $month = '';
+    $monthValue = '';
     $months = array( 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' );
     for ( $i = 0; $i < 12; $i++ )
     {
-        $month .= '<option>'. $months[$i] . '</option>';
+        $monthValue = $i+1;
+        $month .= '<option value='. $monthValue . '>'. $months[$i] . '</option>';
     }
     return $month;
 }

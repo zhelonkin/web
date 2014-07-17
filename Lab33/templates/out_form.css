@@ -1,0 +1,89 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+
+}
+
+body
+{
+    background-color: black;
+}
+
+li 
+{
+    list-style-type: none; /* Убираем маркеры */
+}
+
+ul 
+{
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
+.form
+{
+    width: 368px;
+    background: linear-gradient(to bottom, #FCFDFE, #DDE2EE);
+    font: 13px Tahoma;
+    margin-left: 400px;
+    margin-top: 50px;
+    padding-right: 13px;
+    padding-left: 4px;
+}
+
+.headline
+{
+    font-size: 19px;
+    color: #0E385F;
+    border-bottom: 1px solid #96A6C5;
+    margin-bottom: 10px;
+	padding-bottom: 10px;
+	padding-left: 8px;
+    padding-top: 6px;
+}
+
+.info_block
+{
+    color: #0E385F;
+    margin-left: 15px;
+    text-align: right;
+}
+
+.output_text
+{
+    padding-top: 6px;
+	padding-left: 6px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    width: 262px;
+    height: 25px;
+    border: 1px solid #96A6C5;
+}
+
+.first
+{
+    margin-top: 7px;
+}
+
+.all
+{
+    margin-top: 22px;
+}
+
+.left
+{
+    float: left;
+}
+
+.right
+{
+    float: right;
+}
+
+.clear
+{
+    clear: both;
+}

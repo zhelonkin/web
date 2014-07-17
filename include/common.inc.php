@@ -8,3 +8,5 @@
     require_once('check_user_info.inc.php');
     require_once('user_info.inc.php');
     require_once('error.inc.php');
+    require_once('database.inc.php');
+    require_once('get_date.inc.php');

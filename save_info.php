@@ -3,4 +3,13 @@
   
   $userInfo = getUserInfoFromRequest();
   
-  saveUserInfoToFile( $userInfo );
+  if( checkUserInfo( $userInfo, &$errorCode ) == USER_INFO_OK )
+  {
+      //saveUserInfoToFile( $userInfo );
+      saveUserInfoToDb( $userInfo );
+  };
+  
+  if( $userInfo != USER_INFO_OK )
+  {
+      errorHandler( $errorCode );
+  }
